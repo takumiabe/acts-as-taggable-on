@@ -290,6 +290,7 @@ describe 'Taggable' do
   context 'should be able to create and find tags in languages without capitalization :' do
     ActsAsTaggableOn.strict_case_match = false
     {
+        fullwidth_latin: {name: 'I18n', tag_list: 'ＡＢＣ'},
         japanese: {name: 'Chihiro', tag_list: '日本の'},
         hebrew: {name: 'Salim', tag_list: 'עברית'},
         chinese: {name: 'Ieie', tag_list: '中国的'},
